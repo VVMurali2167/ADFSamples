@@ -1,0 +1,23 @@
+{
+	"name": "LogicAppOutput",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LogicAppLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "LogicAppOutput",
+				"container": "adfdemo916"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
