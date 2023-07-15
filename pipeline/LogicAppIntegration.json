@@ -20,7 +20,17 @@
 						"type": "DataFlowReference",
 						"datasetParameters": {
 							"Department": {
-								"FileName": "Department"
+								"FileName": "Department.csv"
+							},
+							"Sales": {
+								"FileName": "Sales.csv"
+							}
+						},
+						"linkedServiceParameters": {
+							"Sales": {
+								"schemaLinkedService": {
+									"FileName": "Resources.csv"
+								}
 							}
 						}
 					},
