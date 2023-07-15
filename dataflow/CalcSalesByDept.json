@@ -67,7 +67,8 @@
 				"SalesByDept sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> SalesByDeptResults"
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> SalesByDeptResults"
 			]
 		}
 	}
