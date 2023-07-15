@@ -1,0 +1,45 @@
+{
+	"name": "LogicAppSalesSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LogicAppLS",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": "LogicAppSource",
+				"container": "adfdemo916"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DEPTID",
+				"type": "String"
+			},
+			{
+				"name": "DEPTNAME",
+				"type": "String"
+			},
+			{
+				"name": "DEPTLOC",
+				"type": "String"
+			}
+		]
+	}
+}
