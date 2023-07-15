@@ -23,11 +23,15 @@
 			"transformations": [
 				{
 					"name": "SalesDeptJoin"
+				},
+				{
+					"name": "SalesByDept"
 				}
 			],
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     limit: 10,",
 				"     ignoreNoFilesFound: false) ~> Department",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
@@ -36,7 +40,8 @@
 				"     joinType:'inner',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
-				"     broadcast: 'auto')~> SalesDeptJoin"
+				"     broadcast: 'auto')~> SalesDeptJoin",
+				"SalesDeptJoin aggregate() ~> SalesByDept"
 			]
 		}
 	}
