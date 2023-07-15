@@ -12,6 +12,10 @@
 					"name": "Department"
 				},
 				{
+					"dataset": {
+						"referenceName": "LogicAppSource",
+						"type": "DatasetReference"
+					},
 					"name": "Sales"
 				}
 			],
@@ -22,7 +26,8 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> Department",
 				"source(allowSchemaDrift: true,",
-				"     validateSchema: false) ~> Sales"
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> Sales"
 			]
 		}
 	}
