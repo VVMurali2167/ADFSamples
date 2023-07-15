@@ -5,11 +5,20 @@
 			"referenceName": "LogicAppLS",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"OutputFileName": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().OutputFileName",
+					"type": "Expression"
+				},
 				"folderPath": "LogicAppOutput",
 				"container": "adfdemo916"
 			},
