@@ -57,13 +57,7 @@
 										}
 									}
 								},
-								"linkedServiceParameters": {
-									"Sales": {
-										"schemaLinkedService": {
-											"FileName": "Resources.csv"
-										}
-									}
-								}
+								"linkedServiceParameters": {}
 							},
 							"staging": {},
 							"compute": {
