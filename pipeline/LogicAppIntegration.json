@@ -22,13 +22,17 @@
 							"Department": {
 								"FileName": "Department.csv"
 							},
-							"Sales": {
-								"FileName": "Sales.csv"
-							},
 							"SalesByDeptResults": {
 								"OutputFileName": {
 									"value": "@concat('SalesByDept-',string(utcNow()))",
 									"type": "Expression"
+								}
+							}
+						},
+						"linkedServiceParameters": {
+							"Sales": {
+								"schemaLinkedService": {
+									"FileName": "Resources.csv"
 								}
 							}
 						}

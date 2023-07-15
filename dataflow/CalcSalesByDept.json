@@ -13,7 +13,7 @@
 				},
 				{
 					"dataset": {
-						"referenceName": "LogicAppSource",
+						"referenceName": "LogicAppSalesSource",
 						"type": "DatasetReference"
 					},
 					"name": "Sales"
@@ -47,9 +47,11 @@
 				"     limit: 10,",
 				"     ignoreNoFilesFound: false) ~> Department",
 				"source(output(",
+				"          SID as string,",
 				"          DEPTID as string,",
-				"          DEPTNAME as string,",
-				"          DEPTLOC as string",
+				"          SNAME as string,",
+				"          SREGION as string,",
+				"          SDATE as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
@@ -59,7 +61,8 @@
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> SalesDeptJoin",
-				"SalesDeptJoin aggregate() ~> SalesByDept",
+				"SalesDeptJoin aggregate(groupBy(Department@DEPTID,",
+				"          {} = ERROR_FUNCTION(''))) ~> SalesByDept",
 				"SalesByDept sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",

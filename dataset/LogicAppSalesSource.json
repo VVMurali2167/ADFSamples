@@ -29,15 +29,23 @@
 		},
 		"schema": [
 			{
+				"name": "SID",
+				"type": "String"
+			},
+			{
 				"name": "DEPTID",
 				"type": "String"
 			},
 			{
-				"name": "DEPTNAME",
+				"name": "SNAME",
 				"type": "String"
 			},
 			{
-				"name": "DEPTLOC",
+				"name": "SREGION",
+				"type": "String"
+			},
+			{
+				"name": "SDATE",
 				"type": "String"
 			}
 		]
