@@ -31,13 +31,6 @@
 									"type": "Expression"
 								}
 							}
-						},
-						"linkedServiceParameters": {
-							"Sales": {
-								"schemaLinkedService": {
-									"FileName": "Resources.csv"
-								}
-							}
 						}
 					},
 					"compute": {
