@@ -63,7 +63,7 @@
 				"     broadcast: 'auto')~> SalesDeptJoin",
 				"SalesDeptJoin aggregate(groupBy(SID,",
 				"          Sales@DEPTID),",
-				"     DEPTNAME = count()) ~> SalesByDept",
+				"     COUNT = count()) ~> SalesByDept",
 				"SalesByDept sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
