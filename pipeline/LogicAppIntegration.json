@@ -24,6 +24,12 @@
 							},
 							"Sales": {
 								"FileName": "Sales.csv"
+							},
+							"SalesByDeptResults": {
+								"OutputFileName": {
+									"value": "@concat('SalesByDept-',string(utcnow()))",
+									"type": "Expression"
+								}
 							}
 						}
 					},
