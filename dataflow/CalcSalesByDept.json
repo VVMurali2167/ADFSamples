@@ -62,7 +62,7 @@
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> SalesDeptJoin",
 				"SalesDeptJoin aggregate(groupBy(Department@DEPTID,",
-				"          {} = ERROR_FUNCTION(''))) ~> SalesByDept",
+				"          SID)) ~> SalesByDept",
 				"SalesByDept sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     skipDuplicateMapInputs: true,",
