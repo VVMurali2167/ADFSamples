@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Data flow1",
+				"name": "SalesByDeptCalculation",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -24,13 +24,6 @@
 							},
 							"Sales": {
 								"FileName": "Sales.csv"
-							}
-						},
-						"linkedServiceParameters": {
-							"Sales": {
-								"schemaLinkedService": {
-									"FileName": "Resources.csv"
-								}
 							}
 						}
 					},
