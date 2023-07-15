@@ -22,6 +22,9 @@
 							"Department": {
 								"FileName": "Department.csv"
 							},
+							"Sales": {
+								"FileName": "Sales.csv"
+							},
 							"SalesByDeptResults": {
 								"OutputFileName": {
 									"value": "@concat('SalesByDept-',string(utcNow()))",
