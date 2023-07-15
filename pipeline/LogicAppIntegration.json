@@ -27,7 +27,7 @@
 							},
 							"SalesByDeptResults": {
 								"OutputFileName": {
-									"value": "@concat('SalesByDept-',string(utcnow()))",
+									"value": "@concat('SalesByDept-',string(utcNow()))",
 									"type": "Expression"
 								}
 							}
