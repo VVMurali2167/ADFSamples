@@ -27,6 +27,19 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "DEPTID",
+				"type": "String"
+			},
+			{
+				"name": "DEPTNAME",
+				"type": "String"
+			},
+			{
+				"name": "DEPTLOC",
+				"type": "String"
+			}
+		]
 	}
 }
